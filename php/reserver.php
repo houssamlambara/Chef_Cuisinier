@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1
+    0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Le Chef - Alain Passard</title>
 </head>
@@ -14,7 +15,7 @@
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-  <a href="./sign up.php" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
+  <a href="./signin.php" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
     Log In
 </a>
 
@@ -25,7 +26,7 @@
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
   <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
   <li >
-        <a href="./menu.php" class="text-white hover:text-orange-500 transition duration-300">Nos Menus</a>
+        <a href="./menu.php" class="text-white hover:text-orange-500 transition duration-300">Menus</a>
       </li>
       <li>
         <a href="#" class="text-orange-500 hover:text-orange-500 transition duration-300">Réserver</a>
@@ -49,28 +50,28 @@
     <form class="max-w-3xl mx-auto bg-gray-200 p-10 rounded-xl shadow-xl">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="mb-6">
-          <label class="block text-[#6C9A8B] font-semibold mb-2" for="name">Nom</label>
-          <input class="w-full p-4 border border-[#B0BEC5] rounded-lg focus:ring-2 focus:ring-[#F9A825]" id="name" type="text" placeholder="Votre nom" />
+          <label class="block text-black font-semibold mb-2" for="name">Nom</label>
+          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="name" type="text" placeholder="Votre nom" />
         </div>
         <div class="mb-6">
-          <label class="block text-[#6C9A8B] font-semibold mb-2" for="email">Email</label>
-          <input class="w-full p-4 border border-[#B0BEC5] rounded-lg focus:ring-2 focus:ring-[#F9A825]" id="email" type="email" placeholder="Votre email" />
+          <label class="block text-black font-semibold mb-2" for="email">Email</label>
+          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="email" type="email" placeholder="Votre email" />
         </div>
         <div class="mb-6">
-          <label class="block text-[#6C9A8B] font-semibold mb-2" for="phone">Téléphone</label>
-          <input class="w-full p-4 border border-[#B0BEC5] rounded-lg focus:ring-2 focus:ring-[#F9A825]" id="phone" type="tel" placeholder="Votre numéro de téléphone" />
+          <label class="block text-black font-semibold mb-2" for="phone">Téléphone</label>
+          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="phone" type="tel" placeholder="Votre numéro de téléphone" />
         </div>
         <div class="mb-6">
-          <label class="block text-[#6C9A8B] font-semibold mb-2" for="date">Date</label>
-          <input class="w-full p-4 border border-[#B0BEC5] rounded-lg focus:ring-2 focus:ring-[#F9A825]" id="date" type="date" />
+          <label class="block text-black font-semibold mb-2" for="date">Date</label>
+          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="date" type="date" />
         </div>
         <div class="mb-6">
-          <label class="block text-[#6C9A8B] font-semibold mb-2" for="time">Heure</label>
-          <input class="w-full p-4 border border-[#B0BEC5] rounded-lg focus:ring-2 focus:ring-[#F9A825]" id="time" type="time" />
+          <label class="block text-black font-semibold mb-2" for="time">Heure</label>
+          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="time" type="time" />
         </div>
         <div class="mb-6">
-          <label class="block text-[#6C9A8B] font-semibold mb-2" for="guests">Nombre de personnes</label>
-          <input class="w-full p-4 border border-[#B0BEC5] rounded-lg focus:ring-2 focus:ring-[#F9A825]" id="guests" type="number" placeholder="Nombre de personnes" />
+          <label class="block text-black font-semibold mb-2" for="guests">Nombre de personnes</label>
+          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="guests" type="number" placeholder="Nombre de personnes" />
         </div>
       </div>
       <button class="w-full bg-orange-500 text-white py-4 rounded-lg font-semibold hover:bg-gradient-to-l hover:bg-orange-600 transition duration-300">Réserver Maintenant</button>

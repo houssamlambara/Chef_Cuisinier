@@ -14,7 +14,7 @@
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-  <a href="./sign up.php" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
+  <a href="./signin.php" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
     Log In
 </a>
   <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
@@ -24,7 +24,7 @@
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
   <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
   <li >
-        <a href="#" class="text-orange-500 hover:text-orange-500 transition duration-300">Nos Menus</a>
+        <a href="#" class="text-orange-500 hover:text-orange-500 transition duration-300">Menus</a>
       </li>
       <li>
         <a href="./reserver.php" class="text-white hover:text-orange-500 transition duration-300">Réserver</a>
@@ -42,8 +42,8 @@
 
 <!-- Menu Section -->
 <section class="container mx-auto py-16 text-center" id="menu">
-  <h2 class="text-3xl font-bold mb-12">Notre Menu</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+  <h2 class="text-4xl font-extrabold text-orange-500 mb-12">Notre Menu</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
       <img alt="Pâtes à la sauce tomate" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
       <div class="p-6">
@@ -69,7 +69,63 @@
       </div>
     </div>
   </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Pâtes à la sauce tomate" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Pâtes à la Sauce Tomate</h3>
+        <p class="text-gray-600 mt-2">Délicieuses pâtes servies avec une sauce tomate maison et du basilic frais.</p>
+        <p class="text-blue-600 font-bold mt-4">15€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Steak grillé" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Steak Grillé</h3>
+        <p class="text-gray-600 mt-2">Un steak juteux grillé à la perfection, servi avec des légumes de saison.</p>
+        <p class="text-blue-600 font-bold mt-4">25€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Dessert au chocolat" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Dessert au Chocolat</h3>
+        <p class="text-gray-600 mt-2">Un dessert décadent au chocolat, garni de fraises fraîches.</p>
+        <p class="text-blue-600 font-bold mt-4">8€</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Pâtes à la sauce tomate" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Pâtes à la Sauce Tomate</h3>
+        <p class="text-gray-600 mt-2">Délicieuses pâtes servies avec une sauce tomate maison et du basilic frais.</p>
+        <p class="text-blue-600 font-bold mt-4">15€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Steak grillé" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Steak Grillé</h3>
+        <p class="text-gray-600 mt-2">Un steak juteux grillé à la perfection, servi avec des légumes de saison.</p>
+        <p class="text-blue-600 font-bold mt-4">25€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Dessert au chocolat" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Dessert au Chocolat</h3>
+        <p class="text-gray-600 mt-2">Un dessert décadent au chocolat, garni de fraises fraîches.</p>
+        <p class="text-blue-600 font-bold mt-4">8€</p>
+      </div>
+    </div>
+  </div>
+  
 </section>
+
 
 <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">

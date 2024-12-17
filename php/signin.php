@@ -14,7 +14,7 @@
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-  <a href="./sign up.php" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
+  <a href="./signup.php" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
     Log In
 </a>
   <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
@@ -24,7 +24,7 @@
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
   <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
   <li >
-        <a href="./menu.php" class="text-white hover:text-orange-500 transition duration-300">Nos Menus</a>
+        <a href="./menu.php" class="text-white hover:text-orange-500 transition duration-300">Menus</a>
       </li>
       <li>
         <a href="./reserver.php" class="text-white hover:text-orange-500 transition duration-300">Réserver</a>
@@ -42,11 +42,11 @@
 
 <section class="py-16">
   <div class="mx-auto max-w-md bg-gray-200 p-8 rounded-lg shadow-lg">
-    <h2 class="text-3xl font-bold text-center text-orange-500 mb-6">S'inscrire</h2>
+    <h2 class="text-3xl font-bold text-center text-orange-500 mb-6">Se Connecter à votre compte</h2>
     <form>
 
       <div class="mb-4">
-        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+        <label for="email" class="block text-gray-700 font-medium mb-2">Nom d'utilisateur</label>
         <input type="email" id="email" name="email" placeholder="Votre email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
 
@@ -56,10 +56,10 @@
       </div>
 
       <div>
-        <button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500">S'inscrire</button>
+        <button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500">Se connecter et continuer</button>
       </div>
     </form>
-    <p class="mt-4 text-center text-gray-600">Vous avez déjà un compte ? <a href="/login" class="text-orange-600 hover:text-orange-700 font-semibold">Se connecter</a></p>
+    <p class="mt-4 text-center text-gray-600">Vous n’avez pas de compte ? <a href="./signup.php" class="text-orange-600 hover:text-orange-700 font-semibold">Inscrivez-vous</a></p>
   </div>
 </section>
 
@@ -71,7 +71,8 @@
         <div>
                     <h3 class="text-xl font-semibold mb-4">Navigation</h3>
                     <ul class="space-y-2">
-                        <li><a href="./menu.php" class="text-white hover:text-orange-500 transition duration-300">Nos Menus</a></li>
+                        <li><a href="
+                        /menu.php" class="text-white hover:text-orange-500 transition duration-300">Nos Menus</a></li>
                         <li><a href="./reserver.php" class="text-white hover:text-orange-500 transition duration-300">Réserver</a></li>
                         <li><a href="./about.php" class="text-white hover:text-orange-500 transition duration-300">Le Chef</a></li>
                         <li><a href="./contact.php" class="text-white hover:text-orange-500 transition duration-300">Contact</a></li>

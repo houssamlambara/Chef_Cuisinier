@@ -63,13 +63,13 @@
         <button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500">S'inscrire</button>
       </div>
     </form>
-    <p class="mt-4 text-center text-gray-600">Vous avez déjà un compte ? <a href="/login" class="text-orange-600 hover:text-orange-700 font-semibold">Se connecter</a></p>
+    <p class="mt-4 text-center text-gray-600">Vous avez déjà un compte ? <a href="./signin.php" class="text-orange-600 hover:text-orange-700 font-semibold">Se connecter</a></p>
   </div>
 </section>
 
 
 <!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-3 gap-8 justify-items-center">
         <div>

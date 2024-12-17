@@ -30,7 +30,7 @@
         <a href="./reserver.php" class="text-white hover:text-orange-500 transition duration-300">Réserver</a>
       </li>
       <li>
-        <a href="#" class="text-orange-500 hover:text-orange-500 transition duration-300">Le chef</a>
+        <a href="./about.php" class="text-white hover:text-orange-500 transition duration-300">Le chef</a>
       </li>
       <li>
         <a href="./contact.php" class="text-white hover:text-orange-500 transition duration-300">Contact</a>
@@ -39,35 +39,32 @@
   </div>
   </div>
 </nav>
-    <main class="mx-auto px-4 py-24">
-        <section class="max-w-6xl mx-auto">
-            <h1 class="text-5xl font-bold text-center text-orange-500 mb-12 tracking-tight">Le Chef Alain Passard</h1>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center mb-16 bg-gray-200 rounded-xl shadow-lg p-8">
-                <div class="space-y-6">
-                    <p class="text-xl leading-relaxed">
-                        Alain Passard est un chef viscéralement attaché à ses fourneaux depuis près de 35 ans. Le Chef est un grand rôtisseur, il a mis longtemps en pratique ce que sa grand-mère lui a transmis : la passion de la flamme et la cuisson longue des viandes en basse température. Cette passion amènera l'Arpège à devenir l'une des rôtisseries phares de la capitale récompensée de trois étoiles Michelin en 1996.
-                    </p>
-                </div>
-                <div>
-                    <img src="../6458b4217bf5b7e2b040cb46f9ae9dc4-805x1024.png" alt="Chef Alain Passard" class="w-full rounded-xl shadow-xl object-cover"/>
-                </div>
-            </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center bg-gray-200 rounded-xl shadow-lg p-8">
-                <div>
-                    <img src="../734910bbef5232b5f1796ac7dfa224a5-667x1000.jpg" alt="Chef in Garden" class="w-full rounded-xl shadow-xl object-cover"/>
-                </div>
-                <div class="space-y-6">
-                    <p class="text-xl leading-relaxed">
-                        Au début des années 2000, Le Chef vit une profonde rupture dans sa créativité. Il redécouvre alors le jardin, ses fruits, ses légumes et réalise qu'il ne leur a jamais vraiment laissé une place dans ses assiettes. Il décide alors de changer de métier et de se consacrer au tissu végétal.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
+<section class="py-16">
+  <div class="mx-auto max-w-md bg-gray-200 p-8 rounded-lg shadow-lg">
+    <h2 class="text-3xl font-bold text-center text-orange-500 mb-6">S'inscrire</h2>
+    <form>
 
-    <!-- Footer -->
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
+      </div>
+
+      <div class="mb-6">
+        <label for="password" class="block text-gray-700 font-medium mb-2">Mot de Passe</label>
+        <input type="password" id="password" name="password" placeholder="Créer un mot de passe" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
+      </div>
+
+      <div>
+        <button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500">S'inscrire</button>
+      </div>
+    </form>
+    <p class="mt-4 text-center text-gray-600">Vous avez déjà un compte ? <a href="/login" class="text-orange-600 hover:text-orange-700 font-semibold">Se connecter</a></p>
+  </div>
+</section>
+
+
+<!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-3 gap-8 justify-items-center">
@@ -76,7 +73,7 @@
                     <ul class="space-y-2">
                         <li><a href="./menu.php" class="text-white hover:text-orange-500 transition duration-300">Nos Menus</a></li>
                         <li><a href="./reserver.php" class="text-white hover:text-orange-500 transition duration-300">Réserver</a></li>
-                        <li><a href="./" class="text-white hover:text-orange-500 transition duration-300">Le Chef</a></li>
+                        <li><a href="./about.php" class="text-white hover:text-orange-500 transition duration-300">Le Chef</a></li>
                         <li><a href="./contact.php" class="text-white hover:text-orange-500 transition duration-300">Contact</a></li>
                     </ul>
                 </div>
@@ -103,5 +100,6 @@
         </div>
     </footer>
 
-</body>
+    </body>
 </html>
+

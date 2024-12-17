@@ -79,7 +79,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-3 gap-8 justify-items-center">
         <div>

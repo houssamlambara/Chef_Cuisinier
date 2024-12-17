@@ -40,8 +40,39 @@
   </div>
 </nav>
 
+<!-- Menu Section -->
+<section class="container mx-auto py-16 text-center" id="menu">
+  <h2 class="text-3xl font-bold mb-12">Notre Menu</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Pâtes à la sauce tomate" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Pâtes à la Sauce Tomate</h3>
+        <p class="text-gray-600 mt-2">Délicieuses pâtes servies avec une sauce tomate maison et du basilic frais.</p>
+        <p class="text-blue-600 font-bold mt-4">15€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Steak grillé" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Steak Grillé</h3>
+        <p class="text-gray-600 mt-2">Un steak juteux grillé à la perfection, servi avec des légumes de saison.</p>
+        <p class="text-blue-600 font-bold mt-4">25€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Dessert au chocolat" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Dessert au Chocolat</h3>
+        <p class="text-gray-600 mt-2">Un dessert décadent au chocolat, garni de fraises fraîches.</p>
+        <p class="text-blue-600 font-bold mt-4">8€</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-3 gap-8 justify-items-center">
         <div>

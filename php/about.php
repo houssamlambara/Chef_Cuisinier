@@ -1,18 +1,17 @@
-<html lang="fr">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Chef Cuisinier
-  </title>
-  <script src="https://cdn.tailwindcss.com"></script>
- </head>
- <body class="font-roboto bg-gray-100">
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
 
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
   <div class="flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+  <a href="./index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="../logo_cuisine-removebg-preview (1).png" class="h-16" alt="Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
@@ -31,7 +30,7 @@
         <a href="./reserver.php" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Réserver</a>
       </li>
       <li>
-        <a href="./about.php" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Le chef</a>
+        <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Le chef</a>
       </li>
       <li>
         <a href="./contact.php" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
@@ -41,120 +40,52 @@
   </div>
 </nav>
 
-  <section class="relative" id="home">
-   <img alt="Image d'un chef cuisinier préparant un plat gastronomique" class="w-full h-96 object-cover" height="600" src="../fabrizio-magoni-boaDpmC-_Xo-unsplash.jpg" width="1920"/>
-   <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <h1 class="text-white text-4xl md:text-6xl font-bold">
-     Bienvenue chez Chef Cuisinier
-    </h1>
-   </div>
-  </section>
-  <section class="container mx-auto py-12" id="menu">
-   <h2 class="text-3xl font-bold text-center mb-8">
-    Notre Menu
-   </h2>
-   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-     <img alt="Image d'un plat de pâtes avec sauce tomate et basilic" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" width="400"/>
-     <div class="p-4">
-      <h3 class="text-xl font-bold">
-       Pâtes à la sauce tomate
-      </h3>
-      <p class="text-gray-700 mt-2">
-       Délicieuses pâtes servies avec une sauce tomate maison et du basilic frais.
+
+<section class="container mx-auto px-4 py-12">
+  <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Le Chef</h1>
+  <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+    <!-- Colonne du texte centrée verticalement -->
+    <div class="text-lg space-y-4 lg:w-1/2 flex items-center lg:ml-12">
+      <p>
+      Alain Passard est un chef viscéralement attaché à ses fourneaux depuis près de 35 ans. Le Chef est un grand rôtisseur, il a mis longtemps en pratique ce que sa grand-mère lui a transmis :
+      la passion de la flamme et la cuisson longue des viandes en basse température. Cette passion amènera l’Arpège à devenir l’une des rôtisseries phares de la capitale récompensée de trois étoiles Michelin en 1996.
       </p>
-      <p class="text-gray-900 font-bold mt-4">
-       15€
-      </p>
-     </div>
     </div>
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-     <img alt="Image d'un steak grillé avec des légumes" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" width="400"/>
-     <div class="p-4">
-      <h3 class="text-xl font-bold">
-       Steak Grillé
-      </h3>
-      <p class="text-gray-700 mt-2">
-       Un steak juteux grillé à la perfection, servi avec des légumes de saison.
-      </p>
-      <p class="text-gray-900 font-bold mt-4">
-       25€
-      </p>
-     </div>
+    <!-- Colonne de l'image avec un léger décalage -->
+    <div class="lg:w-1/2">
+      <img src="../6458b4217bf5b7e2b040cb46f9ae9dc4-805x1024.png" alt="Le chef" class="w-full lg:w-[480px] h-auto rounded-lg shadow-lg object-cover"/>
     </div>
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-     <img alt="Image d'un dessert au chocolat avec des fraises" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" width="400"/>
-     <div class="p-4">
-      <h3 class="text-xl font-bold">
-       Dessert au Chocolat
-      </h3>
-      <p class="text-gray-700 mt-2">
-       Un dessert décadent au chocolat, garni de fraises fraîches.
-      </p>
-      <p class="text-gray-900 font-bold mt-4">
-       8€
-      </p>
-     </div>
+  </div>
+</section>
+
+<section class="container mx-auto px-4 py-12">
+  <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+    <!-- Colonne de l'image avec un décalage plus grand -->
+    <div class="lg:w-1/2 lg:ml-28">
+      <img src="../734910bbef5232b5f1796ac7dfa224a5-667x1000.jpg" alt="Le chef" class="w-full lg:w-[480px] h-auto rounded-lg shadow-lg object-cover"/>
     </div>
-   </div>
-  </section>
-  <section class="bg-gray-200 py-12" id="reservation">
-   <div class="container mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-8">
-     Réservez une Table
-    </h2>
-    <form class="max-w-lg mx-auto bg-white p-8 shadow-md rounded-lg">
-     <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="name">
-       Nom
-      </label>
-      <input class="w-full px-3 py-2 border rounded-lg" id="name" placeholder="Votre nom" type="text"/>
-     </div>
-     <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="email">
-       Email
-      </label>
-      <input class="w-full px-3 py-2 border rounded-lg" id="email" placeholder="Votre email" type="email"/>
-     </div>
-     <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="phone">
-       Téléphone
-      </label>
-      <input class="w-full px-3 py-2 border rounded-lg" id="phone" placeholder="Votre numéro de téléphone" type="tel"/>
-     </div>
-     <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="date">
-       Date
-      </label>
-      <input class="w-full px-3 py-2 border rounded-lg" id="date" type="date"/>
-     </div>
-     <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="time">
-       Heure
-      </label>
-      <input class="w-full px-3 py-2 border rounded-lg" id="time" type="time"/>
-     </div>
-     <div class="mb-4">
-      <label class="block text-gray-700 font-bold mb-2" for="guests">
-       Nombre de personnes
-      </label>
-      <input class="w-full px-3 py-2 border rounded-lg" id="guests" placeholder="Nombre de personnes" type="number"/>
-     </div>
-     <button class="w-full bg-blue-500 text-white py-2 rounded-lg font-bold hover:bg-blue-600" type="submit">
-      Réserver
-     </button>
-    </form>
-   </div>
-  </section>
-  
+    <!-- Colonne du texte centrée verticalement -->
+    <div class="text-lg space-y-4 lg:w-1/2 flex items-center lg:mr-28">
+      <p>
+      Au début des années 2000, Le Chef vit une profonde rupture dans sa créativité. Il redécouvre alors le jardin, ses fruits, ses légumes et réalise qu’il ne leur a jamais vraiment laissé une place dans ses assiettes. Il décide alors de changer de métier et de se consacrer au tissu végétal.
+</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
 <footer class="bg-white dark:bg-gray-900">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
-              <a href="#" class="flex items-center">
-                  <img src="../logo_cuisine-removebg-preview (1).png" class="h-8 me-3" alt="Logo" />
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+              <a href="https://flowbite.com/" class="flex items-center">
+                  <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
               </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -162,10 +93,10 @@
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="#" class="hover:underline">Flowbite</a>
+                          <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
                       </li>
                       <li>
-                          <a href="#" class="hover:underline">Tailwind CSS</a>
+                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
                       </li>
                   </ul>
               </div>
@@ -173,10 +104,10 @@
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="#" class="hover:underline ">Github</a>
+                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
                       </li>
                       <li>
-                          <a href="#" class="hover:underline">Discord</a>
+                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
                       </li>
                   </ul>
               </div>
@@ -195,7 +126,7 @@
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">Le Chef™</a>. All Rights Reserved.
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
               <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
@@ -233,5 +164,6 @@
     </div>
 </footer>
 
- </body>
+
+</body>
 </html>

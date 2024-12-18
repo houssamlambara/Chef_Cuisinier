@@ -43,86 +43,174 @@
 <!-- Menu Section -->
 <section class="container mx-auto py-16 text-center" id="menu">
   <h2 class="text-4xl font-extrabold text-orange-500 mb-12">Notre Menu</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Pâtes à la sauce tomate" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Pâtes à la Sauce Tomate</h3>
-        <p class="text-gray-600 mt-2">Délicieuses pâtes servies avec une sauce tomate maison et du basilic frais.</p>
+        <h3 class="text-xl font-semibold text-gray-800">Menu Méditerranéen</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu léger et savoureux avec les saveurs de la Méditerranée.
+        <br><br>
+        Entrée: Salade grecque <br>
+        Plat principal: Poisson grillé <br>
+        Dessert: Baklava
+      </p>
         <p class="text-blue-600 font-bold mt-4">15€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Steak grillé" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
+      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Steak Grillé</h3>
-        <p class="text-gray-600 mt-2">Un steak juteux grillé à la perfection, servi avec des légumes de saison.</p>
+        <h3 class="text-xl font-semibold text-gray-800">Menu Thaïlandais</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu épicé et aromatique avec les saveurs de la Thaïlande.
+        <br><br>
+        Entrée: Soupe Tom Yum <br>
+        Plat principal: Pad Thaï <br>
+        Dessert: Mango Sticky Rice
+      </p>
         <p class="text-blue-600 font-bold mt-4">25€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Dessert au chocolat" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" />
+      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" />
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Dessert au Chocolat</h3>
-        <p class="text-gray-600 mt-2">Un dessert décadent au chocolat, garni de fraises fraîches.</p>
+        <h3 class="text-xl font-semibold text-gray-800">Menu Indien</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu épicé avec les saveurs riches de l'Inde.
+        <br><br>
+        Entrée: Samosas <br>
+        Plat principal: Poulet tikka masala <br>
+        Dessert: Gulab jamun
+      </p>
         <p class="text-blue-600 font-bold mt-4">8€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../gallary-6.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Américain</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu copieux avec les saveurs classiques de l'Amérique.
+        <br><br>
+        Entrée: Ailes de poulet <br>
+        Plat principal: Burger au bacon <br>
+        Dessert: Cheesecake
+      </p>
+        <p class="text-blue-600 font-bold mt-4">15€</p>
       </div>
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Pâtes à la sauce tomate" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
+      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="../gallary-4.jpg" />
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Pâtes à la Sauce Tomate</h3>
-        <p class="text-gray-600 mt-2">Délicieuses pâtes servies avec une sauce tomate maison et du basilic frais.</p>
-        <p class="text-blue-600 font-bold mt-4">15€</p>
-      </div>
-    </div>
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Steak grillé" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
-      <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Steak Grillé</h3>
-        <p class="text-gray-600 mt-2">Un steak juteux grillé à la perfection, servi avec des légumes de saison.</p>
+        <h3 class="text-xl font-semibold text-gray-800">Menu Espagnol</h3>
+        <p class="text-gray-600 mt-2">Un menu festif avec les saveurs ensoleillées de l'Espagne.
+
+Entrée: Tapas variées
+Plat principal: Paella
+Dessert: Flan</p>
         <p class="text-blue-600 font-bold mt-4">25€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Dessert au chocolat" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" />
+      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="../gallary-12.jpg" />
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Dessert au Chocolat</h3>
-        <p class="text-gray-600 mt-2">Un dessert décadent au chocolat, garni de fraises fraîches.</p>
+        <h3 class="text-xl font-semibold text-gray-800">Menu Mexicain</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu vibrant avec les saveurs épicées du Mexique.<br><br>
+        Entrée: Nachos au fromage<br>
+        Plat principal: Tacos au poulet<br>
+        Dessert: Churros
+      </p>
         <p class="text-blue-600 font-bold mt-4">8€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Français</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu classique avec les saveurs élégantes de la cuisine française.<br><br>
+        Entrée: Foie gras<br>
+        Plat principal: Coq au vin<br>
+        Dessert: Crème brûlée
+      </p>
+        <p class="text-blue-600 font-bold mt-4">15€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Asiatique</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu exotique avec les saveurs délicates de l'Asie.<br><br>
+        Entrée: Rouleaux de printemps<br>
+        Plat principal: Sushi varié<br>
+        Dessert: Mochi glacé
+      </p>
+        <p class="text-blue-600 font-bold mt-4">25€</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Gourmet</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu raffiné avec des plats exquis pour les gourmets.<br><br>
+        Entrée: Tartare de saumon<br>
+        Plat principal: Filet de boeuf aux morilles<br>
+        Dessert: Soufflé au chocolat</p>
+
+        <p class="text-blue-600 font-bold mt-4">15€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Végétarien</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu sain et délicieux pour les amateurs de cuisine végétarienne.<br><br>
+        Entrée: Salade de quinoa<br>
+        Plat principal: Lasagnes aux légumes<br>
+        Dessert: Tarte aux fruits
+      </p>
+        <p class="text-blue-600 font-bold mt-4">25€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Fruits de Mer</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu frais et savoureux pour les amateurs de fruits de mer.<br><br>
+        Entrée: Huîtres fraîches<br>
+        Plat principal: Bouillabaisse<br>
+        Dessert: Sorbet au citron
+      </p>
+        <p class="text-blue-600 font-bold mt-4">8€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../gallary-6.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Italien</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu authentique avec les saveurs riches de l'Italie.<br><br>
+        Entrée: Bruschetta<br>
+        Plat principal: Tagliatelles à la truffe<br>
+        Dessert: Tiramisu
+      </p>
+        <p class="text-blue-600 font-bold mt-4">15€</p>
       </div>
     </div>
   </div>
   
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Pâtes à la sauce tomate" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
-      <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Pâtes à la Sauce Tomate</h3>
-        <p class="text-gray-600 mt-2">Délicieuses pâtes servies avec une sauce tomate maison et du basilic frais.</p>
-        <p class="text-blue-600 font-bold mt-4">15€</p>
-      </div>
-    </div>
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Steak grillé" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
-      <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Steak Grillé</h3>
-        <p class="text-gray-600 mt-2">Un steak juteux grillé à la perfection, servi avec des légumes de saison.</p>
-        <p class="text-blue-600 font-bold mt-4">25€</p>
-      </div>
-    </div>
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Dessert au chocolat" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" />
-      <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Dessert au Chocolat</h3>
-        <p class="text-gray-600 mt-2">Un dessert décadent au chocolat, garni de fraises fraîches.</p>
-        <p class="text-blue-600 font-bold mt-4">8€</p>
-      </div>
-    </div>
-  </div>
   
 </section>
 

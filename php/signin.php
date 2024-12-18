@@ -41,24 +41,28 @@
 </nav>
 
 <?php
+include("db.php");
 
-session_start();
-include('db.php'); 
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = mysqli_real_escape_string($conn, $_POST['nom']);
+    echo($nom);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    
+    
+    $sql = "INSERT INTO users (nom, password) VALUES ('$name', '$hashed_password')";
+    mysqli_query($conn, $sql);
+    header("Location: signup.php");
 }
-
 ?>
 
 <section class="py-16">
   <div class="mx-auto max-w-md bg-gray-200 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-center text-orange-500 mb-6">Se Connecter à votre compte</h2>
-    <form action="./signin.php" >
+    <form action="signup.php" method="POST">
       <div class="mb-4">
-        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-        <input type="email" id="email" name="email" placeholder="Votre email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
+        <label for="email" class="block text-gray-700 font-medium mb-2">Nom d'utilisateur</label>
+        <input type="text" id="name" name="nom" placeholder="Votre nom d'utilisateur" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
       <div class="mb-6">
         <label for="password" class="block text-gray-700 font-medium mb-2">Mot de Passe</label>

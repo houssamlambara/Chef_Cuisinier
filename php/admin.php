@@ -6,10 +6,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Dashbord Admin</title>
 </head>
-<body>
-    
-</body>
-</html>
 
 <nav class="fixed top-0 z-50 w-full border-gray-200 dark:bg-black">
   <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -116,148 +112,142 @@
       </ul>
    </div>
 </aside>
+<body class="bg-gray-100">
+    <div class="p-6 max-w-7xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8">Dashboard Chef</h1>
+        
+        <!-- Cartes statistiques -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <!-- Demandes en attente -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-yellow-100 text-yellow-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm text-gray-500">Demandes en attente</p>
+                        <p class="text-2xl font-semibold text-gray-700">8</p>
+                    </div>
+                </div>
+            </div>
 
-</aside>
-  <div class="p-4 sm:ml-64">
-   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-20">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-     <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-      <div class="text-center">
-       <p class="text-2xl font-bold text-gray-900 dark:text-white">
-        1,234
-       </p>
-       <p class="text-sm text-gray-500 dark:text-gray-400">
-        Total Users
-       </p>
-      </div>
-     </div>
-     <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-      <div class="text-center">
-       <p class="text-2xl font-bold text-gray-900 dark:text-white">
-        $12,345
-       </p>
-       <p class="text-sm text-gray-500 dark:text-gray-400">
-        Total Earnings
-       </p>
-      </div>
-     </div>
-     <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-      <div class="text-center">
-       <p class="text-2xl font-bold text-gray-900 dark:text-white">
-        567
-       </p>
-       <p class="text-sm text-gray-500 dark:text-gray-400">
-        New Orders
-       </p>
-      </div>
-     </div>
+            <!-- Réservations aujourd'hui -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-green-100 text-green-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm text-gray-500">Réservations aujourd'hui</p>
+                        <p class="text-2xl font-semibold text-gray-700">12</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Réservations demain -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-blue-100 text-blue-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm text-gray-500">Réservations demain</p>
+                        <p class="text-2xl font-semibold text-gray-700">15</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total clients -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-purple-100 text-purple-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm text-gray-500">Total clients inscrits</p>
+                        <p class="text-2xl font-semibold text-gray-700">256</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section des réservations -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Liste des demandes -->
+            <div class="bg-white rounded-lg shadow">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Demandes en attente</h2>
+                    <div class="space-y-4">
+                        <!-- Demande 1 -->
+                        <div class="border rounded-lg p-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h3 class="font-medium">Jean Dupont</h3>
+                                    <p class="text-sm text-gray-500">2 personnes • 20:00</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">
+                                        Accepter
+                                    </button>
+                                    <button class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
+                                        Refuser
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600">Note: Allergie aux fruits de mer</p>
+                        </div>
+
+                        <!-- Demande 2 -->
+                        <div class="border rounded-lg p-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h3 class="font-medium">Marie Martin</h3>
+                                    <p class="text-sm text-gray-500">4 personnes • 19:30</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">
+                                        Accepter
+                                    </button>
+                                    <button class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
+                                        Refuser
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600">Note: Table près de la fenêtre</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prochain client -->
+            <div class="bg-white rounded-lg shadow">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Prochain client</h2>
+                    <div class="border rounded-lg p-6">
+                        <div class="flex items-start">
+                            <div class="ml-4">
+                                <h3 class="font-medium text-lg">Pierre Dubois</h3>
+                                <p class="text-gray-500">Réservation à 19:00</p>
+                                <div class="mt-4 space-y-2">
+                                    <p class="text-sm"><span class="font-medium">Nombre de personnes:</span> 3</p>
+                                    <p class="text-sm"><span class="font-medium">Menu:</span> Menu végétarien</p>
+                                    <p class="text-sm"><span class="font-medium">Historique:</span> Client régulier (5 visites)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-     <div class="text-center">
-      <p class="text-2xl font-bold text-gray-900 dark:text-white">
-       Monthly Revenue
-      </p>
-      <p class="text-4xl font-bold text-green-500 dark:text-green-400">
-       $45,678
-      </p>
-     </div>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-     <div class="flex items-center justify-center h-28 rounded bg-gray-50 dark:bg-gray-800">
-      <div class="text-center">
-       <p class="text-2xl font-bold text-gray-900 dark:text-white">
-        89%
-       </p>
-       <p class="text-sm text-gray-500 dark:text-gray-400">
-        Customer Satisfaction
-       </p>
-      </div>
-     </div>
-     <div class="flex items-center justify-center h-28 rounded bg-gray-50 dark:bg-gray-800">
-      <div class="text-center">
-       <p class="text-2xl font-bold text-gray-900 dark:text-white">
-        1,234
-       </p>
-       <p class="text-sm text-gray-500 dark:text-gray-400">
-        Active Subscriptions
-       </p>
-      </div>
-     </div>
-     <div class="flex items-center justify-center h-28 rounded bg-gray-50 dark:bg-gray-800">
-      <div class="text-center">
-       <p class="text-2xl font-bold text-gray-900 dark:text-white">
-        345
-       </p>
-       <p class="text-sm text-gray-500 dark:text-gray-400">
-        Pending Orders
-       </p>
-      </div>
-     </div>
-     <div class="flex items-center justify-center h-28 rounded bg-gray-50 dark:bg-gray-800">
-      <div class="text-center">
-       <p class="text-2xl font-bold text-gray-900 dark:text-white">
-        78
-       </p>
-       <p class="text-sm text-gray-500 dark:text-gray-400">
-        New Reviews
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-     <div class="text-center">
-      <p class="text-2xl font-bold text-gray-900 dark:text-white">
-       Yearly Growth
-      </p>
-      <p class="text-4xl font-bold text-blue-500 dark:text-blue-400">
-       25%
-      </p>
-     </div>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-     <div class="flex items-center justify-center h-28 rounded bg-gray-50 dark:bg-gray-800">
-      <div class="text-center">
-       <p class="text-2xl font-bold text-gray-900 dark:text-white">
-        1,567
-       </p>
-       <p class="text-sm text-gray-500 dark:text-gray-400">
-        Total Products
-       </p>
-      </div>
-     </div>
-     <div class="flex items-center justify-center h-28 rounded bg-gray-50 dark:bg-gray-800">
-      <div class="text-center">
-       <p class="text-2xl font-bold text-gray-900 dark:text-white">
-        234
-       </p>
-       <p class="text-sm text-gray-500 dark:text-gray-400">
-        New Customers
-       </p>
-      </div>
-     </div>
-     <div class="flex items-center justify-center h-28 rounded bg-gray-50 dark:bg-gray-800">
-      <div class="text-center">
-       <p class="text-2xl font-bold text-gray-900 dark:text-white">
-        456
-       </p>
-       <p class="text-sm text-gray-500 dark:text-gray-400">
-        Support Tickets
-       </p>
-      </div>
-     </div>
-     <div class="flex items-center justify-center h-28 rounded bg-gray-50 dark:bg-gray-800">
-      <div class="text-center">
-       <p class="text-2xl font-bold text-gray-900 dark:text-white">
-        789
-       </p>
-       <p class="text-sm text-gray-500 dark:text-gray-400">
-        Completed Orders
-       </p>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
- </body>
+</body>
 </html>
 

@@ -10,7 +10,7 @@
 <nav class="bg-white dark:bg-black">
   <div class="flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="./index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="../logo_cuisine-removebg-preview (1).png" class="h-16" alt="Logo" />
+      <img src="../logo_cuisine.png" class="h-16" alt="Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

@@ -10,7 +10,7 @@
 <nav class="bg-white dark:bg-black">
   <div class="flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="./index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="../logo_cuisine-removebg-preview (1).png" class="h-16" alt="Logo" />
+      <img src="../logo_cuisine.png" class="h-16" alt="Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -43,22 +43,19 @@
 <section class="py-16">
   <div class="mx-auto max-w-md bg-gray-200 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-center text-orange-500 mb-6">Se Connecter à votre compte</h2>
-    <form>
-
+    <form action="./signin.php" >
       <div class="mb-4">
         <label for="email" class="block text-gray-700 font-medium mb-2">Nom d'utilisateur</label>
         <input type="email" id="email" name="email" placeholder="Votre email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
-
       <div class="mb-6">
         <label for="password" class="block text-gray-700 font-medium mb-2">Mot de Passe</label>
         <input type="password" id="password" name="password" placeholder="Créer un mot de passe" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
-
-      <div>
-        <button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500">Se connecter et continuer</button>
-      </div>
     </form>
+    <div>
+      <a href="./admin.php"><button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500">Se connecter et continuer</button>
+      </div>
     <p class="mt-4 text-center text-gray-600">Vous n’avez pas de compte ? <a href="./signup.php" class="text-orange-600 hover:text-orange-700 font-semibold">Inscrivez-vous</a></p>
   </div>
 </section>

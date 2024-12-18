@@ -10,7 +10,7 @@
 <nav class="bg-white dark:bg-black">
   <div class="flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="./index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="../logo_cuisine-removebg-preview (1).png" class="h-16" alt="Logo" />
+      <img src="../logo_cuisine.png" class="h-16" alt="Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -43,66 +43,7 @@
 <!-- Menu Section -->
 <section class="container mx-auto py-16 text-center" id="menu">
   <h2 class="text-4xl font-extrabold text-orange-500 mb-12">Notre Menu</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../mediterranee.jpg" />
-      <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Menu Méditerranéen</h3>
-        <p class="text-gray-600 mt-2">
-        Un menu léger et savoureux avec les saveurs de la Méditerranée.
-        <br><br>
-        Entrée: Salade grecque <br>
-        Plat principal: Poisson grillé <br>
-        Dessert: Baklava
-      </p>
-        <p class="text-blue-600 font-bold mt-4">15€</p>
-      </div>
-    </div>
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="../thailandais.jpg" />
-      <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Menu Thaïlandais</h3>
-        <p class="text-gray-600 mt-2">
-        Un menu épicé et aromatique avec les saveurs de la Thaïlande.
-        <br><br>
-        Entrée: Soupe Tom Yum <br>
-        Plat principal: Pad Thaï <br>
-        Dessert: Mango Sticky Rice
-      </p>
-        <p class="text-blue-600 font-bold mt-4">25€</p>
-      </div>
-    </div>
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="../indien.jpg" />
-      <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Menu Indien</h3>
-        <p class="text-gray-600 mt-2">
-        Un menu épicé avec les saveurs riches de l'Inde.
-        <br><br>
-        Entrée: Samosas <br>
-        Plat principal: Poulet tikka masala <br>
-        Dessert: Gulab jamun
-      </p>
-        <p class="text-blue-600 font-bold mt-4">8€</p>
-      </div>
-    </div>
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../gallary-6.jpg" />
-      <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Menu Américain</h3>
-        <p class="text-gray-600 mt-2">
-        Un menu copieux avec les saveurs classiques de l'Amérique.
-        <br><br>
-        Entrée: Ailes de poulet <br>
-        Plat principal: Burger au bacon <br>
-        Dessert: Cheesecake
-      </p>
-        <p class="text-blue-600 font-bold mt-4">15€</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
       <img alt="Steak grillé" class="w-auto h-auto object-cover" src="../espagnol.jpg">
       <div class="p-6">
@@ -157,7 +98,7 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
       <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../GOURMET.jpg" />
       <div class="p-6">
@@ -211,7 +152,64 @@
       </div>
     </div>
   </div>
-  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../mediterranee.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Méditerranéen</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu léger et savoureux avec les saveurs de la Méditerranée.
+        <br><br>
+        Entrée: Salade grecque <br>
+        Plat principal: Poisson grillé <br>
+        Dessert: Baklava
+      </p>
+        <p class="text-blue-600 font-bold mt-4">15€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="../thailandais.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Thaïlandais</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu épicé et aromatique avec les saveurs de la Thaïlande.
+        <br><br>
+        Entrée: Soupe Tom Yum <br>
+        Plat principal: Pad Thaï <br>
+        Dessert: Mango Sticky Rice
+      </p>
+        <p class="text-blue-600 font-bold mt-4">25€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="../indien.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Indien</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu épicé avec les saveurs riches de l'Inde.
+        <br><br>
+        Entrée: Samosas <br>
+        Plat principal: Poulet tikka masala <br>
+        Dessert: Gulab jamun
+      </p>
+        <p class="text-blue-600 font-bold mt-4">8€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../american.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Américain</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu copieux avec les saveurs classiques de l'Amérique.
+        <br><br>
+        Entrée: Ailes de poulet <br>
+        Plat principal: Burger au bacon <br>
+        Dessert: Cheesecake
+      </p>
+        <p class="text-blue-600 font-bold mt-4">15€</p>
+      </div>
+    </div>
+  </div>
   
 </section>
 

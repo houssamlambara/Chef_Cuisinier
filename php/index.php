@@ -10,7 +10,7 @@
 <nav class="bg-white dark:bg-black">
   <div class="flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="../logo_cuisine-removebg-preview (1).png" class="h-16" alt="Logo" />
+      <img src="../logo_cuisine.png" class="h-16" alt="Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -40,12 +40,30 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
 <section class="relative h-screen overflow-hidden bg-cover bg-center" style="background-image: url('../fabrizio-magoni-boaDpmC-_Xo-unsplash.jpg');">
   <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
     <h1 class="text-orange-500 text-4xl md:text-6xl font-bold text-center">Bienvenue chez Le Chef </h1>
   </div>
 </section>
+
+<!-- <section class="mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+     <div>
+      <img alt="Image du chef cuisinier souriant avec une toque de chef" class="w-full h-64 object-cover rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/CDDeKoI0jbzhWKfDMfx78H5f06Fv2F4co2twNpZ56UUaFXwPB.jpg" width="600"/>
+     </div>
+     <div class="flex flex-col justify-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">
+       À propos du Chef
+      </h2>
+      <p class="text-gray-600 mb-4">
+       Notre chef, avec plus de 20 ans d'expérience, est passionné par la création de plats innovants et délicieux. Il a travaillé dans les meilleurs restaurants du monde et apporte maintenant son expertise à votre table.
+      </p>
+      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+       En savoir plus
+      </button>
+     </div>
+    </div>
+   </section> -->
 
 <!-- Menu Section -->
 <section class="container mx-auto py-16 text-center" id="menu">

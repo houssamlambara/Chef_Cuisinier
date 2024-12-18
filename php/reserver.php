@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1
-    0">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Le Chef - Alain Passard</title>
 </head>
@@ -43,39 +42,76 @@
 </nav>
 
 <!-- Reservation Section -->
+
+<?php
+// Inclure la connexion à la base de données
+include("db.php");
+
+// Vérifier si le formulaire a été soumis
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Récupérer les données du formulaire
+    $nom = $conn->real_escape_string($_POST['nom']);
+    echo ($nom);
+    $email = $conn->real_escape_string($_POST['email']);
+    $telephone = $conn->real_escape_string($_POST['telephone']);
+    $date_reservation = $conn->real_escape_string($_POST['date_reservation']);
+    $heure_reservation = $conn->real_escape_string($_POST['heure_reservation']);
+    $nombre_personnes = (int)$_POST['nombre_personnes']; // Assurez-vous que c'est un entier
+    
+    // Combiner la date et l'heure en un seul champ DATETIME
+    $date_heure_reservation = $date_reservation . ' ' . $heure_reservation;
+
+    // Créer la requête SQL pour insérer les données dans la base de données
+    $sql = "INSERT INTO reservation (nom, email, telephone, date_reservation, heure_reservation, nombre_personnes, status)
+            VALUES ('$nom', '$email', '$telephone', '$date_heure_reservation', '$heure_reservation', $nombre_personnes, 'en attente')";
+
+    // Exécuter la requête SQL
+    $res = $conn->query($sql);
+
+    if ($res) {
+        // Si la requête est réussie, rediriger l'utilisateur
+        header('Location: reserver.php');
+    } else {
+        // Si une erreur survient, afficher l'erreur
+        echo "Erreur : " . $conn->error;
+    }
+}
+?>
+
 <section class="py-16" id="reservation">
   <div class="mx-auto text-center">
     <h2 class="text-4xl font-extrabold text-orange-500 mb-8">Réservez votre Table</h2>
     <p class="text-lg font-semibold text-black mb-12">Venez savourer une expérience culinaire inoubliable. Réservez une table dès maintenant.</p>
-    <form class="max-w-3xl mx-auto bg-gray-200 p-10 rounded-xl shadow-xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="mb-6">
-          <label class="block text-black font-semibold mb-2" for="name">Nom</label>
-          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="name" type="text" placeholder="Votre nom" />
-        </div>
-        <div class="mb-6">
-          <label class="block text-black font-semibold mb-2" for="email">Email</label>
-          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="email" type="email" placeholder="Votre email" />
-        </div>
-        <div class="mb-6">
-          <label class="block text-black font-semibold mb-2" for="phone">Téléphone</label>
-          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="phone" type="tel" placeholder="Votre numéro de téléphone" />
-        </div>
-        <div class="mb-6">
-          <label class="block text-black font-semibold mb-2" for="date">Date</label>
-          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="date" type="date" />
-        </div>
-        <div class="mb-6">
-          <label class="block text-black font-semibold mb-2" for="time">Heure</label>
-          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="time" type="time" />
-        </div>
-        <div class="mb-6">
-          <label class="block text-black font-semibold mb-2" for="guests">Nombre de personnes</label>
-          <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="guests" type="number" placeholder="Nombre de personnes" />
-        </div>
-      </div>
-      <button class="w-full bg-orange-500 text-white py-4 rounded-lg font-semibold hover:bg-gradient-to-l hover:bg-orange-600 transition duration-300">Réserver Maintenant</button>
-    </form>
+    <form class="max-w-3xl mx-auto bg-gray-200 p-10 rounded-xl shadow-xl" method="POST" action="">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="mb-6">
+      <label class="block text-black font-semibold mb-2" for="name">Nom</label>
+      <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="name" name="nom" type="text" placeholder="Votre nom" required />
+    </div>
+    <div class="mb-6">
+      <label class="block text-black font-semibold mb-2" for="email">Email</label>
+      <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="email" name="email" type="email" placeholder="Votre email" required />
+    </div>
+    <div class="mb-6">
+      <label class="block text-black font-semibold mb-2" for="phone">Téléphone</label>
+      <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="phone" name="telephone" type="tel" placeholder="Votre numéro de téléphone" required />
+    </div>
+    <div class="mb-6">
+      <label class="block text-black font-semibold mb-2" for="date">Date</label>
+      <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="date" name="date_reservation" type="date" required />
+    </div>
+    <div class="mb-6">
+      <label class="block text-black font-semibold mb-2" for="time">Heure</label>
+      <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="time" name="heure_reservation" type="time" required />
+    </div>
+    <div class="mb-6">
+      <label class="block text-black font-semibold mb-2" for="guests">Nombre de personnes</label>
+      <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="guests" name="nombre_personnes" type="number" placeholder="Nombre de personnes" required />
+    </div>
+  </div>
+  <button class="w-full bg-orange-500 text-white py-4 rounded-lg font-semibold hover:bg-gradient-to-l hover:bg-orange-600 transition duration-300">Réserver Maintenant</button>
+</form>
+
   </div>
 </section>
 
@@ -87,8 +123,8 @@
                     <h3 class="text-xl font-semibold mb-4">Navigation</h3>
                     <ul class="space-y-2">
                         <li><a href="./menu.php" class="text-white hover:text-orange-500 transition duration-300">Nos Menus</a></li>
-                        <li><a href="./reserver.php" class="text-white hover:text-orange-500 transition duration-300">Réserver</a></li>
-                        <li><a href="#" class="text-white hover:text-orange-500 transition duration-300">Le Chef</a></li>
+                        <li><a href="#" class="text-white hover:text-orange-500 transition duration-300">Réserver</a></li>
+                        <li><a href="./about.php" class="text-white hover:text-orange-500 transition duration-300">Le Chef</a></li>
                         <li><a href="./contact.php" class="text-white hover:text-orange-500 transition duration-300">Contact</a></li>
                     </ul>
                 </div>

@@ -40,12 +40,24 @@
   </div>
 </nav>
 
+<?php
+
+session_start();
+include('db.php'); 
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+}
+
+?>
+
 <section class="py-16">
   <div class="mx-auto max-w-md bg-gray-200 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-center text-orange-500 mb-6">Se Connecter à votre compte</h2>
     <form action="./signin.php" >
       <div class="mb-4">
-        <label for="email" class="block text-gray-700 font-medium mb-2">Nom d'utilisateur</label>
+        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
         <input type="email" id="email" name="email" placeholder="Votre email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
       <div class="mb-6">

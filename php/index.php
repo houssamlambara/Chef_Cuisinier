@@ -58,7 +58,7 @@
       <p class="text-gray-600 mb-4">
        Notre chef, avec plus de 20 ans d'expérience, est passionné par la création de plats innovants et délicieux. Il a travaillé dans les meilleurs restaurants du monde et apporte maintenant son expertise à votre table.
       </p>
-      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-orange-500">
        En savoir plus
       </button>
      </div>
@@ -67,35 +67,61 @@
 
 <!-- Menu Section -->
 <section class="container mx-auto py-16 text-center" id="menu">
-  <h2 class="text-3xl font-bold mb-12">Notre Menu</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+  <h2 class="text-4xl font-extrabold text-orange-500 mb-12">Notre Menu</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Pâtes à la sauce tomate" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
+      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="../espagnol.jpg">
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Pâtes à la Sauce Tomate</h3>
-        <p class="text-gray-600 mt-2">Délicieuses pâtes servies avec une sauce tomate maison et du basilic frais.</p>
-        <p class="text-blue-600 font-bold mt-4">15€</p>
+        <h3 class="text-xl font-semibold text-gray-800">Menu Espagnol</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu festif avec les saveurs ensoleillées de l'Espagne.<br><br>
+        Entrée: Tapas variées<br>
+        Plat principal: Paella<br>
+        Dessert: Flan
+      </p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Steak grillé" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
+      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="../mexicain.jpg" />
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Steak Grillé</h3>
-        <p class="text-gray-600 mt-2">Un steak juteux grillé à la perfection, servi avec des légumes de saison.</p>
-        <p class="text-blue-600 font-bold mt-4">25€</p>
+        <h3 class="text-xl font-semibold text-gray-800">Menu Mexicain</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu vibrant avec les saveurs épicées du Mexique.<br><br>
+        Entrée: Nachos au fromage<br>
+        Plat principal: Tacos au poulet<br>
+        Dessert: Churros
+      </p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Dessert au chocolat" class="w-full h-56 object-cover" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" />
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../france.jpg" />
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800">Dessert au Chocolat</h3>
-        <p class="text-gray-600 mt-2">Un dessert décadent au chocolat, garni de fraises fraîches.</p>
-        <p class="text-blue-600 font-bold mt-4">8€</p>
+        <h3 class="text-xl font-semibold text-gray-800">Menu Français</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu classique avec les saveurs élégantes de la cuisine française.<br><br>
+        Entrée: Foie gras<br>
+        Plat principal: Coq au vin<br>
+        Dessert: Crème brûlée
+      </p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
+      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="../asiatique.jpg" />
+      <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800">Menu Asiatique</h3>
+        <p class="text-gray-600 mt-2">
+        Un menu exotique avec les saveurs délicates de l'Asie.<br><br>
+        Entrée: Rouleaux de printemps<br>
+        Plat principal: Sushi varié<br>
+        Dessert: Mochi glacé
+      </p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
   </div>
-</section>
-
 <!-- Footer -->
   <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">

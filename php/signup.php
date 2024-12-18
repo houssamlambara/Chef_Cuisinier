@@ -40,20 +40,71 @@
   </div>
 </nav>
 
+
+<?php
+include("db.php");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = mysqli_real_escape_string($conn, $_POST['nom']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    
+    
+    $sql = "INSERT INTO users (nom, email, phone, password) VALUES ('$name', '$email', '$phone', '$hashed_password')";
+    mysqli_query($conn, $sql);
+    header("Location: signin.php");
+
+
+
+  echo $email .  $phone;
+  // // Hash du mot de passe avant de l'enregistrer
+  // $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+  // // Vérifier si l'email existe déjà
+  // $sql_check = "SELECT * FROM users WHERE email = '$email'";
+  // $result = $conn->query($sql_check);
+
+
+  // if ($result->num_rows > 0 && !empty($email) ) {
+  //     echo "Un utilisateur avec cet email existe déjà.";
+  // } elseif (!empty($nom) && !empty($email) && !empty($phone) && !empty($password) )  {
+  //     // Insertion dans la base de données
+  //     $sql = "INSERT INTO users (nom, email, phone, password) VALUES ('$nom', '$email', '$phone', '$hashed_password')";
+
+  //     if ($conn->query($sql) === TRUE) {
+  //         echo "Inscription réussie !"; // alert men be3d 
+  //     } else {
+  //         echo "Erreur : " . $sql . "<br>" . $conn->error;
+  //     }
+  // }
+
+  // // Fermer la connexion
+  // $conn->close();
+}
+?>
+
+
 <section class="py-16">
   <div class="mx-auto max-w-md bg-gray-200 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-center text-orange-500 mb-6">S'inscrire</h2>
-    <form>
-      <div class="mb-4">
+    <form action="signup.php" method="POST">
+    <div class="mb-4">
         <label for="name" class="block text-gray-700 font-medium mb-2">Nom d'utilisateur</label>
-        <input type="text" id="name" name="name" placeholder="Votre nom complet" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
+        <input type="text" id="name" name="nom" placeholder="Votre nom complet" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
 
       <div class="mb-4">
         <label for="email" class="block text-gray-700 font-medium mb-2">Adresse email</label>
         <input type="email" id
-        ="email" name="email" placeholder="Votre email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
+        ="email" name="email" placeholder="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
+
+      <div class="mb-6">
+        <label for="password" class="block text-gray-700 font-medium mb-2">Telephone</label>
+        <input type="phone" id="phone" name="phone" placeholder="Enter votre Numero" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
+        </div>
 
       <div class="mb-6">
         <label for="password" class="block text-gray-700 font-medium mb-2">Mot de Passe</label>

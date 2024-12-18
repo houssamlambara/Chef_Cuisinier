@@ -76,7 +76,7 @@
                     <ul class="space-y-2">
                         <li><a href="./menu.php" class="text-white hover:text-orange-500 transition duration-300">Nos Menus</a></li>
                         <li><a href="./reserver.php" class="text-white hover:text-orange-500 transition duration-300">Réserver</a></li>
-                        <li><a href="./" class="text-white hover:text-orange-500 transition duration-300">Le Chef</a></li>
+                        <li><a href="#" class="text-white hover:text-orange-500 transition duration-300">Le Chef</a></li>
                         <li><a href="./contact.php" class="text-white hover:text-orange-500 transition duration-300">Contact</a></li>
                     </ul>
                 </div>

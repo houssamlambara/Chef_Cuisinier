@@ -54,7 +54,7 @@
         Plat principal: Paella<br>
         Dessert: Flan
       </p>
-        <p class="text-blue-600 font-bold mt-4">25€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
@@ -67,7 +67,7 @@
         Plat principal: Tacos au poulet<br>
         Dessert: Churros
       </p>
-        <p class="text-blue-600 font-bold mt-4">8€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
@@ -80,7 +80,7 @@
         Plat principal: Coq au vin<br>
         Dessert: Crème brûlée
       </p>
-        <p class="text-blue-600 font-bold mt-4">15€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
@@ -93,7 +93,7 @@
         Plat principal: Sushi varié<br>
         Dessert: Mochi glacé
       </p>
-        <p class="text-blue-600 font-bold mt-4">25€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
   </div>
@@ -109,7 +109,7 @@
         Plat principal: Filet de boeuf aux morilles<br>
         Dessert: Soufflé au chocolat</p>
 
-        <p class="text-blue-600 font-bold mt-4">15€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
@@ -122,7 +122,7 @@
         Plat principal: Lasagnes aux légumes<br>
         Dessert: Tarte aux fruits
       </p>
-        <p class="text-blue-600 font-bold mt-4">25€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
@@ -135,7 +135,7 @@
         Plat principal: Bouillabaisse<br>
         Dessert: Sorbet au citron
       </p>
-        <p class="text-blue-600 font-bold mt-4">8€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
@@ -148,7 +148,7 @@
         Plat principal: Tagliatelles à la truffe<br>
         Dessert: Tiramisu
       </p>
-        <p class="text-blue-600 font-bold mt-4">15€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
   </div>
@@ -164,7 +164,7 @@
         Plat principal: Poisson grillé <br>
         Dessert: Baklava
       </p>
-        <p class="text-blue-600 font-bold mt-4">15€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
@@ -178,7 +178,7 @@
         Plat principal: Pad Thaï <br>
         Dessert: Mango Sticky Rice
       </p>
-        <p class="text-blue-600 font-bold mt-4">25€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
@@ -192,7 +192,7 @@
         Plat principal: Poulet tikka masala <br>
         Dessert: Gulab jamun
       </p>
-        <p class="text-blue-600 font-bold mt-4">8€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
@@ -206,7 +206,7 @@
         Plat principal: Burger au bacon <br>
         Dessert: Cheesecake
       </p>
-        <p class="text-blue-600 font-bold mt-4">15€</p>
+        <p class="text-orange-500 font-bold mt-4">120€</p>
       </div>
     </div>
   </div>

@@ -45,7 +45,7 @@
   <h2 class="text-4xl font-extrabold text-orange-500 mb-12">Notre Menu</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../mediterranee.jpg" />
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800">Menu Méditerranéen</h3>
         <p class="text-gray-600 mt-2">
@@ -59,7 +59,7 @@
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
+      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="../thailandais.jpg" />
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800">Menu Thaïlandais</h3>
         <p class="text-gray-600 mt-2">
@@ -73,7 +73,7 @@
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" />
+      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="../indien.jpg" />
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800">Menu Indien</h3>
         <p class="text-gray-600 mt-2">
@@ -104,19 +104,20 @@
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="../gallary-4.jpg" />
+      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="../espagnol.jpg">
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800">Menu Espagnol</h3>
-        <p class="text-gray-600 mt-2">Un menu festif avec les saveurs ensoleillées de l'Espagne.
-
-Entrée: Tapas variées
-Plat principal: Paella
-Dessert: Flan</p>
+        <p class="text-gray-600 mt-2">
+        Un menu festif avec les saveurs ensoleillées de l'Espagne.<br><br>
+        Entrée: Tapas variées<br>
+        Plat principal: Paella<br>
+        Dessert: Flan
+      </p>
         <p class="text-blue-600 font-bold mt-4">25€</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="../gallary-12.jpg" />
+      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="../mexicain.jpg" />
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800">Menu Mexicain</h3>
         <p class="text-gray-600 mt-2">
@@ -129,7 +130,7 @@ Dessert: Flan</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../france.jpg" />
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800">Menu Français</h3>
         <p class="text-gray-600 mt-2">
@@ -142,7 +143,7 @@ Dessert: Flan</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
+      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="../asiatique.jpg" />
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800">Menu Asiatique</h3>
         <p class="text-gray-600 mt-2">
@@ -158,7 +159,7 @@ Dessert: Flan</p>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/syYfCztU9E1GOitBMRIdlvnjWoVfMO3kTuGc5LDLPqohFg7TA.jpg" />
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../GOURMET.jpg" />
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800">Menu Gourmet</h3>
         <p class="text-gray-600 mt-2">
@@ -171,7 +172,7 @@ Dessert: Flan</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/Af5z1Ckt5DTya6M5aEnIuVsbjCF2n4XPcWcP7ZLvePEfKA3nA.jpg" />
+      <img alt="Steak grillé" class="w-auto h-auto object-cover" src="../VEGETARIEN.jpg" />
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800">Menu Végétarien</h3>
         <p class="text-gray-600 mt-2">
@@ -184,7 +185,7 @@ Dessert: Flan</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/BYuKH27Ce7TeeI0otPEbGwuvHixfIiHFsFTqlebIuDnXsAcfE.jpg" />
+      <img alt="Dessert au chocolat" class="w-auto h-auto object-cover" src="../FRUIT de mer.jpg" />
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800">Menu Fruits de Mer</h3>
         <p class="text-gray-600 mt-2">
@@ -197,7 +198,7 @@ Dessert: Flan</p>
       </div>
     </div>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
-      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../gallary-6.jpg" />
+      <img alt="Pâtes à la sauce tomate" class="w-auto h-auto object-cover" src="../ITALIEN.jpg" />
       <div class="p-6">
         <h3 class="text-xl font-semibold text-gray-800">Menu Italien</h3>
         <p class="text-gray-600 mt-2">

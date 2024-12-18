@@ -113,12 +113,10 @@
    </div>
 </aside>
 <body class="bg-gray-100">
-    <div class="p-6 max-w-7xl mx-auto">
+    <div class="p-6 max-w-7xl mx-auto ml-64">
         <h1 class="text-3xl font-bold text-gray-800 mb-8">Dashboard Chef</h1>
         
-        <!-- Cartes statistiques -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <!-- Demandes en attente -->
             <div class="bg-white rounded-lg shadow p-6">
                 <div class="flex items-center">
                     <div class="p-3 rounded-full bg-yellow-100 text-yellow-500">
@@ -133,7 +131,6 @@
                 </div>
             </div>
 
-            <!-- Réservations aujourd'hui -->
             <div class="bg-white rounded-lg shadow p-6">
                 <div class="flex items-center">
                     <div class="p-3 rounded-full bg-green-100 text-green-500">
@@ -148,7 +145,6 @@
                 </div>
             </div>
 
-            <!-- Réservations demain -->
             <div class="bg-white rounded-lg shadow p-6">
                 <div class="flex items-center">
                     <div class="p-3 rounded-full bg-blue-100 text-blue-500">
@@ -163,7 +159,6 @@
                 </div>
             </div>
 
-            <!-- Total clients -->
             <div class="bg-white rounded-lg shadow p-6">
                 <div class="flex items-center">
                     <div class="p-3 rounded-full bg-purple-100 text-purple-500">
@@ -179,14 +174,11 @@
             </div>
         </div>
 
-        <!-- Section des réservations -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <!-- Liste des demandes -->
             <div class="bg-white rounded-lg shadow">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold text-gray-800 mb-4">Demandes en attente</h2>
                     <div class="space-y-4">
-                        <!-- Demande 1 -->
                         <div class="border rounded-lg p-4">
                             <div class="flex justify-between items-start mb-2">
                                 <div>
@@ -204,8 +196,6 @@
                             </div>
                             <p class="text-sm text-gray-600">Note: Allergie aux fruits de mer</p>
                         </div>
-
-                        <!-- Demande 2 -->
                         <div class="border rounded-lg p-4">
                             <div class="flex justify-between items-start mb-2">
                                 <div>
@@ -227,7 +217,6 @@
                 </div>
             </div>
 
-            <!-- Prochain client -->
             <div class="bg-white rounded-lg shadow">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold text-gray-800 mb-4">Prochain client</h2>

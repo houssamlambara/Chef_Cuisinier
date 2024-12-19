@@ -66,7 +66,7 @@
    </section> -->
 
 <!-- Menu Section -->
-<section class="container mx-auto py-16 text-center" id="menu">
+<section class="container mx-auto text-center mt-12" id="menu">
   <h2 class="text-4xl font-extrabold text-orange-500 mb-12">Notre Menu</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
     <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition">
@@ -123,7 +123,7 @@
     </div>
   </div>
 <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
+  <footer class="bg-black text-white py-12">
         <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-3 gap-8 justify-items-center">
         <div>

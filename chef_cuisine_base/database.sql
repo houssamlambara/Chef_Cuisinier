@@ -5,7 +5,7 @@ CREATE TABLE USERS (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom varchar(100) NOT NULL,
     email varchar(100) UNIQUE NOT NULL,
-    phone int(15) UNIQUE NOT NULL,
+    phone varchar(15) UNIQUE NOT NULL,
     password varchar(200) NOT NULL,
     id_role int  NOT NULL
 );

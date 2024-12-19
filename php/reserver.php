@@ -1,3 +1,8 @@
+<?php
+function isLoggedIn() {
+  return isset($_SESSION);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +19,22 @@
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-  <a href="./signin.php" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
-  Sign In
+  <a href="#" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
+  <!-- Sign In -->
 </a>
+<div class="nav-buttons">
+            <?php if(!isLoggedIn()): ?>
+                <!-- Show login button if not logged in -->
+                <a href="login.php" class="btn-login">Login</a>
+            <?php else: ?>
+                <!-- Show user info and logout if logged in -->
+                <span>Welcome, <?php echo htmlspecialchars($_SESSION['email']); ?></span>
+                <?php if($_SESSION['id_role'] == 1): ?>
+                    <span>(Admin)</span>
+                <?php endif; ?>
+                <a href="logout.php" class="btn-logout">Logout</a>
+            <?php endif; ?>
+        </div>
 
   <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
   </button>
@@ -44,35 +62,33 @@
 <!-- Reservation Section -->
 
 <?php
-// Inclure la connexion à la base de données
 include("db.php");
+session_start();
+if (!isset($_SESSION['id_user']) || empty($_SESSION['id_user'])) {
+  header("Location: signup.php");
+            exit();
+ }
 
-// Vérifier si le formulaire a été soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Récupérer les données du formulaire
-    $nom = $conn->real_escape_string($_POST['nom']);
-    echo ($nom);
-    $email = $conn->real_escape_string($_POST['email']);
-    $telephone = $conn->real_escape_string($_POST['telephone']);
+
     $date_reservation = $conn->real_escape_string($_POST['date_reservation']);
+    echo ($date_reservation);
+
     $heure_reservation = $conn->real_escape_string($_POST['heure_reservation']);
-    $nombre_personnes = (int)$_POST['nombre_personnes']; // Assurez-vous que c'est un entier
-    
-    // Combiner la date et l'heure en un seul champ DATETIME
+    echo ($heure_reservation);
+
+    $nombre_personnes = (int)$_POST['nombre_personnes']; 
+    echo ($nombre_personnes);
+
     $date_heure_reservation = $date_reservation . ' ' . $heure_reservation;
 
-    // Créer la requête SQL pour insérer les données dans la base de données
-    $sql = "INSERT INTO reservation (nom, email, telephone, date_reservation, heure_reservation, nombre_personnes, status)
-            VALUES ('$nom', '$email', '$telephone', '$date_heure_reservation', '$heure_reservation', $nombre_personnes, 'en attente')";
+    $sql = "INSERT INTO reservation (date_reservation, heure_reservation, nombre_personnes )
+            VALUES ('$date_heure_reservation', '$heure_reservation', '$nombre_personnes' )";
 
-    // Exécuter la requête SQL
     $res = $conn->query($sql);
-
     if ($res) {
-        // Si la requête est réussie, rediriger l'utilisateur
         header('Location: reserver.php');
     } else {
-        // Si une erreur survient, afficher l'erreur
         echo "Erreur : " . $conn->error;
     }
 }
@@ -89,14 +105,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="name" name="nom" type="text" placeholder="Votre nom" required />
     </div>
     <div class="mb-6">
-      <label class="block text-black font-semibold mb-2" for="email">Email</label>
-      <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="email" name="email" type="email" placeholder="Votre email" required />
-    </div>
-    <div class="mb-6">
-      <label class="block text-black font-semibold mb-2" for="phone">Téléphone</label>
-      <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="phone" name="telephone" type="tel" placeholder="Votre numéro de téléphone" required />
-    </div>
-    <div class="mb-6">
       <label class="block text-black font-semibold mb-2" for="date">Date</label>
       <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="date" name="date_reservation" type="date" required />
     </div>
@@ -109,14 +117,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="guests" name="nombre_personnes" type="number" placeholder="Nombre de personnes" required />
     </div>
   </div>
-  <button class="w-full bg-orange-500 text-white py-4 rounded-lg font-semibold hover:bg-gradient-to-l hover:bg-orange-600 transition duration-300">Réserver Maintenant</button>
+  <!-- Sélecteur de menu -->
+  <div class="mb-6">
+  <label class="block text-black font-semibold mb-2" for="menu">Choisir un menu</label>
+  <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="menu" name="menu" required>
+    <option value="" disabled selected>Choisir un menu</option>
+    <option value="menu1">Menu 1: Entrée, Plat, Dessert</option>
+    <option value="menu2">Menu 2: Entrée, Plat végétarien, Dessert</option>
+    <option value="menu3">Menu 3: Entrée, Plat de poisson, Dessert</option>
+    <option value="menu4">Menu 4: Entrée, Plat de viande, Dessert</option>
+  </select>
+</div>
+<button class="w-full bg-orange-500 text-white py-4 rounded-lg font-semibold hover:bg-gradient-to-l hover:bg-orange-600 transition duration-300">Réserver Maintenant</button>
 </form>
-
   </div>
 </section>
 
 <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-black text-white py-12">
         <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-3 gap-8 justify-items-center">
         <div>

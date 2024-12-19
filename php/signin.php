@@ -44,36 +44,57 @@
 include("db.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = mysqli_real_escape_string($conn, $_POST['nom']);
-    echo($nom);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     
+    // Use prepared statement to prevent SQL injection
+    $sql = "SELECT * FROM users WHERE email = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $user = mysqli_fetch_object($result);
     
-    $sql = "INSERT INTO users (nom, password) VALUES ('$name', '$hashed_password')";
-    mysqli_query($conn, $sql);
-    header("Location: signup.php");
+    // Check if user exists and verify password
+    if ($user && password_verify($password, $user->password)) {
+        // Start session
+        session_start();
+        
+        // Set session variables
+        $_SESSION['user_id'] = $user->id;
+        $_SESSION['email'] = $user->email;
+        $_SESSION['role'] = $user->role;
+        
+        // Redirect based on role (1 = admin, 2 = user)
+        if ($user->role == 1) {
+            header("Location: admin.php");
+            exit();
+        } else {
+            header("Location: index.php");
+            exit();
+        }
+    } 
 }
 ?>
 
 <section class="py-16">
   <div class="mx-auto max-w-md bg-gray-200 p-8 rounded-lg shadow-lg">
     <h2 class="text-3xl font-bold text-center text-orange-500 mb-6">Se Connecter à votre compte</h2>
-    <form action="signup.php" method="POST">
+    <form action="signin.php" method="POST">
       <div class="mb-4">
-        <label for="email" class="block text-gray-700 font-medium mb-2">Nom d'utilisateur</label>
-        <input type="text" id="name" name="nom" placeholder="Votre nom d'utilisateur" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
+        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre nom d'utilisateur" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
       <div class="mb-6">
         <label for="password" class="block text-gray-700 font-medium mb-2">Mot de Passe</label>
         <input type="password" id="password" name="password" placeholder="Créer un mot de passe" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
-    </form>
     <div>
-      <a href="./admin.php"><button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500">Se connecter et continuer</button>
+      <button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500">Se connecter et continuer</button>
       </div>
     <p class="mt-4 text-center text-gray-600">Vous n’avez pas de compte ? <a href="./signup.php" class="text-orange-600 hover:text-orange-700 font-semibold">Inscrivez-vous</a></p>
   </div>
+  </form>
 </section>
 
 
@@ -84,8 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div>
                     <h3 class="text-xl font-semibold mb-4">Navigation</h3>
                     <ul class="space-y-2">
-                        <li><a href="
-                        /menu.php" class="text-white hover:text-orange-500 transition duration-300">Nos Menus</a></li>
+                        <li><a href="/menu.php" class="text-white hover:text-orange-500 transition duration-300">Nos Menus</a></li>
                         <li><a href="./reserver.php" class="text-white hover:text-orange-500 transition duration-300">Réserver</a></li>
                         <li><a href="./about.php" class="text-white hover:text-orange-500 transition duration-300">Le Chef</a></li>
                         <li><a href="./contact.php" class="text-white hover:text-orange-500 transition duration-300">Contact</a></li>

@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     
     
-    $sql = "INSERT INTO users (nom, email, phone, password) VALUES ('$name', '$email', '$phone', '$hashed_password')";
+    $sql = "INSERT INTO users (nom, email, phone, password,id_role) VALUES ('$name', '$email', '$phone', '$hashed_password',2)";
     mysqli_query($conn, $sql);
     header("Location: signin.php");
 }

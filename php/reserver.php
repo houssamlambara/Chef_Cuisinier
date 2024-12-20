@@ -17,24 +17,11 @@ function isLoggedIn() {
   <a href="./index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="../logo_cuisine.png" class="h-16" alt="Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
-  </a>
+      </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-  <a href="#" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
-  <!-- Sign In -->
+  <a href="./signin.php" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
+    Sign In
 </a>
-<div class="nav-buttons">
-            <?php if(!isLoggedIn()): ?>
-                <!-- Show login button if not logged in -->
-                <a href="signin.php" class="btn-login">Login</a>
-            <?php else: ?>
-                <!-- Show user info and logout if logged in -->
-                <span>Welcome, <?php echo htmlspecialchars($_SESSION['email']); ?></span>
-                <?php if($_SESSION['id_role'] == 1): ?>
-                    <span>(Admin)</span>
-                <?php endif; ?>
-                <a href="logout.php" class="btn-logout">Logout</a>
-            <?php endif; ?>
-        </div>
 
   <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
   </button>
@@ -62,13 +49,16 @@ function isLoggedIn() {
 <!-- Reservation Section -->
 
 <?php
-include("db.php");
 session_start();
-// if (!isset($_SESSION['id_user']) || empty($_SESSION['id_user'])) {
-//   header("Location: signup.php");
-//             exit();
-//  }
 
+// Vérifiez si l'utilisateur est connecté
+if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
+    echo "Veuillez vous connecter avant de faire une réservation.";
+    exit();  // Stopper l'exécution du script
+}
+
+// Si l'utilisateur est connecté, récupérer son ID
+$id_user = (int)$_SESSION['user_id'];
 $mysqli = new mysqli("localhost", "root", "", "restaurant");
 
 if ($mysqli->connect_error) {
@@ -79,13 +69,14 @@ if ($mysqli->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         // Récupérer et valider les données du formulaire
-        if (!isset($_POST['id_menu']) || !isset($_POST['date_reservation']) || 
+        if (!isset($_POST['nom']) || !isset($_POST['id_menu']) || !isset($_POST['date_reservation']) || 
             !isset($_POST['heure_reservation']) || !isset($_POST['nombre_personnes'])) {
             throw new Exception("Tous les champs sont requis");
         }
 
+        // Récupération des données et validation
+        $nom = $mysqli->real_escape_string($_POST['nom']);
         $id_menu = (int)$_POST['id_menu'];
-        $id_user = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : 0;
         $date_reservation = $mysqli->real_escape_string($_POST['date_reservation']);
         $heure_reservation = $mysqli->real_escape_string($_POST['heure_reservation']);
         $nombre_personnes = (int)$_POST['nombre_personnes'];
@@ -102,24 +93,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         $stmt->close();
 
+        // Vérifier que le nombre de personnes est valide
+        if ($nombre_personnes <= 0) {
+            throw new Exception("Le nombre de personnes doit être supérieur à zéro.");
+        }
+
         // Préparer la requête d'insertion
-        $insert_query = "INSERT INTO RESERVATION (id_user, id_menu, date_reservation, heure_reservation, nombre_personnes) 
-                        VALUES (?, ?, ?, ?, ?)";
-        
+        $insert_query = "INSERT INTO RESERVATION (nom, id_user, id_menu, date_reservation, heure_reservation, nombre_personnes) 
+                         VALUES (?, ?, ?, ?, ?, ?)";
+
         $stmt = $mysqli->prepare($insert_query);
         if (!$stmt) {
             throw new Exception("Erreur de préparation de la requête: " . $mysqli->error);
         }
 
         // Lier les paramètres
-        $stmt->bind_param("iissi", 
-            $id_user, 
-            $id_menu, 
+        $stmt->bind_param("siissi", 
+            $nom,          // Nom du client
+            $id_user,      // ID de l'utilisateur
+            $id_menu,      // ID du menu
             $date_reservation,
             $heure_reservation,
             $nombre_personnes
         );
 
+        // Exécuter la requête
         if (!$stmt->execute()) {
             throw new Exception("Erreur lors de la réservation: " . $stmt->error);
         }

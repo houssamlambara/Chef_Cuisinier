@@ -65,6 +65,7 @@
 <?php
 include("db.php");
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
@@ -112,11 +113,11 @@ if (isset($error_message)) {
     <form action="signin.php" method="POST">
       <div class="mb-4">
         <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-        <input type="email" id="email" name="email" placeholder="Votre nom d'utilisateur" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
+        <input type="email" id="email" name="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
       <div class="mb-6">
         <label for="password" class="block text-gray-700 font-medium mb-2">Mot de Passe</label>
-        <input type="password" id="password" name="password" placeholder="Créer un mot de passe" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
+        <input type="password" id="password" name="password" placeholder="Mot de passe" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
     <div>
       <button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500">Se connecter et continuer</button>

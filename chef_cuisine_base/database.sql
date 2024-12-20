@@ -20,20 +20,21 @@ CREATE TABLE MENUS (
     nom varchar(100) NOT NULL,
     description TEXT,
     image varchar(100) NOT NULL,
-    ingredients TEXT,
-    
+    prix DECIMAL(10, 2) NOT NULL
 );
 
 CREATE TABLE RESERVATION (
-    id int AUTO_INCREMENT PRIMARY KEY,
-    id_user int AUTO_INCREMENT PRIMARY KEY,
-    id_menu int  NOT NULL,
-    date_reservation date NOT NULL,
-    heure_reservation time NOT NULL,
-    nombre_personnes int NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_user INT NOT NULL,
+    id_menu INT NOT NULL,
+    date_reservation DATE NOT NULL,
+    heure_reservation TIME NOT NULL,
+    nombre_personnes INT NOT NULL,
     statut ENUM('En attente', 'Valider', 'Refuse') DEFAULT 'En attente',
     date_creation DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_menu) REFERENCES MENUS(id) ON DELETE CASCADE
+    FOREIGN KEY (id_menu) REFERENCES MENUS(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_user) REFERENCES USERS(id)  -- si la table USERS existe
 );
 
 INSERT INTO `roles` (`id`, `nom`) VALUES (NULL, 'admin'), (NULL, 'user');
+

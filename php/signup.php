@@ -92,13 +92,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       <div class="mb-4">
         <label for="email" class="block text-gray-700 font-medium mb-2">Adresse email</label>
-        <input type="email" id
-        ="email" name="email" placeholder="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
+        <input type="email" id="email" name="email" placeholder="Votre email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
       </div>
 
       <div class="mb-6">
         <label for="password" class="block text-gray-700 font-medium mb-2">Telephone</label>
-        <input type="phone" id="phone" name="phone" placeholder="Enter votre Numero" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
+        <input type="phone" id="phone" name="phone" placeholder="Votre Numero" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required />
         </div>
 
       <div class="mb-6">

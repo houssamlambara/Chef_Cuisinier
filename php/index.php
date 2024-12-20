@@ -7,6 +7,13 @@
     <title>Le Chef - Alain Passard</title>
 </head>
 <body class="bg-gray-50 text-gray-800">
+
+<?php 
+  session_start();
+
+  echo $_SESSION['user_id'];
+  die();
+?>
 <nav class="bg-white dark:bg-black">
   <div class="flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="./index.php" class="flex items-center space-x-3 rtl:space-x-reverse">

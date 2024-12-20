@@ -1,8 +1,8 @@
-<?php
+<!-- <?php
 function isLoggedIn() {
   return isset($_SESSION);
 }
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,32 +64,75 @@ function isLoggedIn() {
 <?php
 include("db.php");
 session_start();
-if (!isset($_SESSION['id_user']) || empty($_SESSION['id_user'])) {
-  header("Location: signup.php");
-            exit();
- }
+// if (!isset($_SESSION['id_user']) || empty($_SESSION['id_user'])) {
+//   header("Location: signup.php");
+//             exit();
+//  }
 
+$mysqli = new mysqli("localhost", "root", "", "restaurant");
+
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+
+// Vérifier si le formulaire a été soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    try {
+        // Récupérer et valider les données du formulaire
+        if (!isset($_POST['id_menu']) || !isset($_POST['date_reservation']) || 
+            !isset($_POST['heure_reservation']) || !isset($_POST['nombre_personnes'])) {
+            throw new Exception("Tous les champs sont requis");
+        }
 
-    $date_reservation = $conn->real_escape_string($_POST['date_reservation']);
-    echo ($date_reservation);
+        $id_menu = (int)$_POST['id_menu'];
+        $id_user = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : 0;
+        $date_reservation = $mysqli->real_escape_string($_POST['date_reservation']);
+        $heure_reservation = $mysqli->real_escape_string($_POST['heure_reservation']);
+        $nombre_personnes = (int)$_POST['nombre_personnes'];
 
-    $heure_reservation = $conn->real_escape_string($_POST['heure_reservation']);
-    echo ($heure_reservation);
+        // Vérifier si l'ID du menu existe
+        $query = "SELECT id FROM MENUS WHERE id = ?";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param("i", $id_menu);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-    $nombre_personnes = (int)$_POST['nombre_personnes']; 
-    echo ($nombre_personnes);
+        if ($result->num_rows === 0) {
+            throw new Exception("Le menu sélectionné n'existe pas!");
+        }
+        $stmt->close();
 
-    $date_heure_reservation = $date_reservation . ' ' . $heure_reservation;
+        // Préparer la requête d'insertion
+        $insert_query = "INSERT INTO RESERVATION (id_user, id_menu, date_reservation, heure_reservation, nombre_personnes) 
+                        VALUES (?, ?, ?, ?, ?)";
+        
+        $stmt = $mysqli->prepare($insert_query);
+        if (!$stmt) {
+            throw new Exception("Erreur de préparation de la requête: " . $mysqli->error);
+        }
 
-    $sql = "INSERT INTO reservation (date_reservation, heure_reservation, nombre_personnes )
-            VALUES ('$date_heure_reservation', '$heure_reservation', '$nombre_personnes' )";
+        // Lier les paramètres
+        $stmt->bind_param("iissi", 
+            $id_user, 
+            $id_menu, 
+            $date_reservation,
+            $heure_reservation,
+            $nombre_personnes
+        );
 
-    $res = $conn->query($sql);
-    if ($res) {
-        header('Location: reserver.php');
-    } else {
-        echo "Erreur : " . $conn->error;
+        if (!$stmt->execute()) {
+            throw new Exception("Erreur lors de la réservation: " . $stmt->error);
+        }
+
+        echo "Réservation effectuée avec succès!";
+
+    } catch (Exception $e) {
+        echo "Erreur : " . $e->getMessage();
+    } finally {
+        if (isset($stmt)) {
+            $stmt->close();
+        }
+        $mysqli->close();
     }
 }
 ?>
@@ -120,13 +163,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <!-- Sélecteur de menu -->
   <div class="mb-6">
   <label class="block text-black font-semibold mb-2" for="menu">Choisir un menu</label>
-  <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="menu" name="menu" required>
+  <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="menu" name="id_menu" required>
     <option value="" disabled selected>Choisir un menu</option>
-    <option value="menu1">Menu 1: Entrée, Plat, Dessert</option>
-    <option value="menu2">Menu 2: Entrée, Plat végétarien, Dessert</option>
-    <option value="menu3">Menu 3: Entrée, Plat de poisson, Dessert</option>
-    <option value="menu4">Menu 4: Entrée, Plat de viande, Dessert</option>
-  </select>
+    <?php
+                include ("db.php");
+                $sql = "SELECT * FROM `menus`";
+                $res = $conn->query($sql);
+                while ($row = $res->fetch_assoc()) {
+                echo "<option value='{$row['id']}'> {$row['nom']} </option>";
+                }
+              ?>
+                </select>
 </div>
 <button class="w-full bg-orange-500 text-white py-4 rounded-lg font-semibold hover:bg-gradient-to-l hover:bg-orange-600 transition duration-300">Réserver Maintenant</button>
 </form>

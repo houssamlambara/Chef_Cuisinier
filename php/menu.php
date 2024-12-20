@@ -63,7 +63,7 @@
     </nav>
 </nav>
 
-<!-- Menu Section -->
+<!-- Menu -->
 <section class="container mx-auto py-16 text-center" id="menu">
   <h2 class="text-4xl font-extrabold text-orange-500 mb-12">Notre Menu</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

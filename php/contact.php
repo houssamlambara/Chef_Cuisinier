@@ -70,7 +70,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <!-- Right Section - Contact Form -->
+
         <div class="bg-gray-200 p-8 rounded-lg shadow-xl">
                 <h3 class="text-3xl font-semibold text-gray-800 mb-4">Envoyez-nous un message</h3>
                 <form action="#" method="POST">
@@ -93,7 +93,7 @@
                     </div>
                 </form>
             </div>
-            <!-- Left Section - Contact Information -->
+
             <div class="bg-gray-200 p-8 rounded-lg shadow-xl space-y-6">
                 <h3 class="text-3xl font-semibold text-gray-800">Informations de Contact</h3>
                 <ul class="text-lg text-gray-700 space-y-4">

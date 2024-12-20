@@ -107,17 +107,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             throw new Exception("Erreur de préparation de la requête: " . $mysqli->error);
         }
 
-        // Lier les paramètres
+        
         $stmt->bind_param("siissi", 
-            $nom,          // Nom du client
-            $id_user,      // ID de l'utilisateur
-            $id_menu,      // ID du menu
+            $nom,        
+            $id_user,     
+            $id_menu,      
             $date_reservation,
             $heure_reservation,
             $nombre_personnes
         );
 
-        // Exécuter la requête
         if (!$stmt->execute()) {
             throw new Exception("Erreur lors de la réservation: " . $stmt->error);
         }
@@ -158,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <input class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="guests" name="nombre_personnes" type="number" placeholder="Nombre de personnes" required />
     </div>
   </div>
-  <!-- Sélecteur de menu -->
+
   <div class="mb-6">
   <label class="block text-black font-semibold mb-2" for="menu">Choisir un menu</label>
   <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" id="menu" name="id_menu" required>

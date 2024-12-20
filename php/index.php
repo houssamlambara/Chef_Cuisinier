@@ -9,7 +9,7 @@
 <body class="bg-gray-50 text-gray-800">
 <nav class="bg-white dark:bg-black">
   <div class="flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+  <a href="./index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="../logo_cuisine.png" class="h-16" alt="Logo" />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
@@ -43,25 +43,20 @@
   </div>
   </div>
 
-  <div id="mobile-menu" class="md:hidden hidden bg-white w-full shadow-lg mt-4 p-6">
-            <div class="flex items-center justify-between mb-4">
-                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="../logo_cuisine.png" class="h-16" alt="Logo" />
-                </a>
-            </div>
+  <div id="mobile-menu" class="md:hidden hidden bg-black w-full shadow-lg mt-4 p-6">
 
             <ul class="space-y-4">
                 <li>
-                    <a href="./menu.php" class="text-black hover:text-orange-500 transition duration-300">Menus</a>
+                    <a href="./menu.php" class="text-white hover:text-orange-500 transition duration-300">Menus</a>
                 </li>
                 <li>
-                    <a href="./reserver.php" class="text-black hover:text-orange-500 transition duration-300">Réserver</a>
+                    <a href="./reserver.php" class="text-white hover:text-orange-500 transition duration-300">Réserver</a>
                 </li>
                 <li>
-                    <a href="./about.php" class="text-black hover:text-orange-500 transition duration-300">Le chef</a>
+                    <a href="./about.php" class="text-white hover:text-orange-500 transition duration-300">Le chef</a>
                 </li>
                 <li>
-                    <a href="./contact.php" class="text-black hover:text-orange-500 transition duration-300">Contact</a>
+                    <a href="./contact.php" class="text-white hover:text-orange-500 transition duration-300">Contact</a>
                 </li>
             </ul>
         </div>

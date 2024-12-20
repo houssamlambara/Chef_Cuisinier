@@ -25,7 +25,7 @@ function isLoggedIn() {
 <div class="nav-buttons">
             <?php if(!isLoggedIn()): ?>
                 <!-- Show login button if not logged in -->
-                <a href="login.php" class="btn-login">Login</a>
+                <a href="signin.php" class="btn-login">Login</a>
             <?php else: ?>
                 <!-- Show user info and logout if logged in -->
                 <span>Welcome, <?php echo htmlspecialchars($_SESSION['email']); ?></span>

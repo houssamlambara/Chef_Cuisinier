@@ -14,11 +14,15 @@
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-  <a href="#" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
-  Sign In
+  <a href="./signin.php" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-base px-6 py-3 text-center dark:bg-orange-500 dark:hover:bg-orange-600">
+    Sign In
 </a>
-  <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-  </button>
+<button id="burger-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <span class="sr-only">Open menu</span>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm0 7h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm0 7h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z" clip-rule="evenodd" />
+        </svg>
+      </button>
 </div>
 
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
@@ -38,8 +42,26 @@
     </ul>
   </div>
   </div>
-</nav>
 
+  <div id="mobile-menu" class="md:hidden hidden bg-black w-full shadow-lg mt-4 p-6">
+
+            <ul class="space-y-4">
+                <li>
+                    <a href="./menu.php" class="text-white hover:text-orange-500 transition duration-300">Menus</a>
+                </li>
+                <li>
+                    <a href="./reserver.php" class="text-white hover:text-orange-500 transition duration-300">Réserver</a>
+                </li>
+                <li>
+                    <a href="./about.php" class="text-white hover:text-orange-500 transition duration-300">Le chef</a>
+                </li>
+                <li>
+                    <a href="./contact.php" class="text-white hover:text-orange-500 transition duration-300">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</nav>
 <?php
 include("db.php");
 
@@ -72,7 +94,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: index.php");
             exit();
         }
-    } 
+      } else {
+        $error_message = "Email ou mot de passe incorrect.";
+    }
+  } 
+?>
+
+<?php
+if (isset($error_message)) {
+    echo "<p style='color:black;'>$error_message</p>";
 }
 ?>
 
@@ -95,6 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </div>
   </form>
 </section>
+
 
 
 <!-- Footer -->
@@ -133,6 +164,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </footer>
 
+    <script>
+        const burgerMenuButton = document.getElementById('burger-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        console.log('mobile-menu');
+        
+        burgerMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
     </body>
 </html>
 
